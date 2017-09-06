@@ -1,14 +1,119 @@
-table {
+/* universal */
+body {
+  background-color: #FAFBFD;
 }
 
-.slds-combobox-lookup {
-	width: 50px;
+/* filter styles */
+.filter-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 48px 16px;  
+}
+@media only screen and (min-width: 64.0625em) {
+  .filter-container {
+    padding: 48px 32px;
+  }
+}
+.filter-search, .filter-region {
+  padding: 0 6px;
+}
+.filter-search {
+  flex: 1 1 66.666666%;
+}
+.filter-search input {
+  padding: 8px 16px;
+  height: 48px;
+  border-radius: 0;
+}
+.filter-region {
+  flex: 1 1 33.333333%;
+  min-width: 120px;
+}
+.filter-region select {
+  padding: 8px 16px !important;
+  height: 48px;
+  border-radius: 0;
 }
 
-.slds-select {
-	width: 500px;
+.refresh-button {
+  border-radius: 0px;
+  height: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(255,183,93,0.9);
+  border: 1px solid rgba(255,183,93,0.9);
+  margin: 0 6px;
 }
 
+.refresh-button:hover {
+  background-color: rgba(255,183,93,1);
+  border: 1px solid rgba(255,183,93,1);
+}
+
+/* card styles */
+.card-container {
+  margin: 0 auto;
+  padding: 32px 0;
+}
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  padding: 8px 0px;
+  border-bottom: 1px solid #E0E5EE;
+}
+.card-row:last-child {
+  border-bottom: 0;
+}
+.card-label, .card-text {
+  color: #54698D;
+  font-size: 15px;
+  line-height: 32px;
+  margin: 0 2px;
+}
+.card-label {
+  text-transform: uppercase;
+  flex: 0;
+  min-width: 105px;
+}
+.card-text {
+  font-weight: 300;
+  flex: 1;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-switch {
+  padding: 4px 0;
+}
+
+
+/* slds overrides */
+.slds-card {
+  background-color: #FFFFFF;
+  margin: 12px;
+  border-radius: 0;
+  border-color: #E0E5EE;
+}
 .slds-card__body {
-	height: 400px;
+  margin: 0;
+  padding: 24px;
+}
+.slds-checkbox_toggle .slds-checkbox_faux {
+  background-color: rgba(194, 57, 52, 0.8);
+  border: 1px solid rgba(194, 57, 52, 0.8);
+}
+.slds-checkbox_toggle .slds-checkbox_faux:hover {
+  background-color: rgba(194, 57, 52, 1);
+  border: 1px solid rgba(194, 57, 52, 1);
+}
+.slds-checkbox_toggle [type="checkbox"]:checked + .slds-checkbox_faux_container .slds-checkbox_faux {
+  background-color: rgba(75, 202, 129, 0.8);
+  border: 1px solid rgba(75, 202, 129, 0.8);
+}
+.slds-checkbox_toggle [type="checkbox"]:checked + .slds-checkbox_faux_container .slds-checkbox_faux:hover {
+  background-color: rgba(75, 202, 129, 1);
+  border: 1px solid rgba(75, 202, 129, 1);
 }

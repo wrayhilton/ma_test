@@ -6,125 +6,380 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playground</title>
     <link rel="stylesheet" type="text/css" href="./assets/styles/salesforce-lightning-design-system.css" />
-		<link rel="stylesheet" type="text/css" href="./style.css" />
-		<link rel="stylesheet" type="text/css" href="./scripts.js" />		
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts.js"></script>
   </head>
 
-		<body>
-				<!--Selector-->
-				<div class="slds-form-element">
-					<label class="slds-form-element__label" for="select-01">Region</label>
-					<div class="slds-form-element__control">
-						<div class="slds-select_container">
-							<select class="slds-select" id="select-01">
-								<option>All</option>
-								<option>Northeast</option>
-								<option>Midwest</option>
-								<option>Southeast</option>
-							</select>
-						</div>
-					</div>
-				</div>				
-				
-			<!--Lookups-->	
-				<div class="slds-form-element">
-					<label class="slds-form-element__label" for="combobox-unique-id">Search</label>
-					<div class="slds-form-element__control">
-						<div class="slds-combobox_container slds-has-inline-listbox">
-							<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup" aria-expanded="false" aria-haspopup="listbox" role="combobox">
-								<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
-									<input type="text" class="slds-input slds-combobox__input" id="combobox-unique-id" aria-autocomplete="list" aria-controls="listbox-unique-id" autocomplete="off" role="textbox" placeholder="Search Salesforce">
-									<span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right" title="Description of icon when needed">
-										<svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
-											<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
-										</svg>
-										<span class="slds-assistive-text">Description of icon</span>
-									</span>
-								</div>
-								<div id="listbox-unique-id" role="listbox">
-									<ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
-										<li role="presentation" class="slds-listbox__item">
-											<span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
-												<span class="slds-media__figure">
-													<span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
-														<svg class="slds-icon slds-icon_small" aria-hidden="true">
-															<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
-														</svg>
-														<span class="slds-assistive-text">Description of icon</span>
-													</span>
-												</span>
-												<span class="slds-media__body">
-													<span class="slds-listbox__option-text slds-listbox__option-text_entity">Acme</span>
-													<span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
-												</span>
-											</span>
-										</li>
-										<li role="presentation" class="slds-listbox__item">
-											<span id="listbox-option-unique-id-02" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
-												<span class="slds-media__figure">
-													<span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
-														<svg class="slds-icon slds-icon_small" aria-hidden="true">
-															<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
-														</svg>
-														<span class="slds-assistive-text">Description of icon</span>
-													</span>
-												</span>
-												<span class="slds-media__body">
-													<span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce.com, Inc.</span>
-													<span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
-												</span>
-											</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			<!--Card-->
-		<article class="slds-card">
-			<div class="slds-card__body">
-				<table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
-					<thead>
-						<tr class="slds-text-title_caps">
-							<th scope="col">
-								<div class="slds-truncate" title="Status">Status</div>
-							</th>
-							<th scope="col">
-								<div class="slds-truncate" title="Company">Company</div>
-							</th>
-							<th scope="col">
-								<div class="slds-truncate" title="Region">Region</div>
-							</th>
-							<th scope="col">
-								<div class="slds-truncate" title="Eamil">Email</div>
-							</th>
-							<th scope="col">
-								<div class="slds-truncate" title="Date">Date</div>
-							</th>								
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="slds-hint-parent">
-							<th scope="row">
-								<div class="slds-truncate" title="Active"><a href="javascript:void(0);">Active</a></div>
-							</th>
-							<td>
-								<div class="slds-truncate" title="Van Speeding">Van Speeding</div>
-							</td>
-							<td>
-								<div class="slds-truncate" title="All">All</div>
-							</td>
-							<td>
-								<div class="slds-truncate" title="Michelle Jones">Michelle Jones</div>
-							</td>
-							<td>
-								<div class="slds-truncate" title="6/12/16">6/12/16</div>
-							</td>								
-						</tr>
-					</tbody>
-				</table>
-			</div>
-	</body>
+  <body>
+    <div class="filter-container">
+      <!-- Search -->
+      <div class="filter-search slds-form-element">
+        <div class="slds-form-element__control">
+          <input type="text" id="text-input-id-1" class="slds-input" placeholder="Search by Attribute">
+        </div>
+      </div>
+  
+      <!-- Selector -->
+      <div class="filter-region slds-form-element">
+        <div class="slds-form-element__control">
+          <div class="slds-select_container">
+            <select class="slds-select" id="select-01">
+              <option selected="selected" disabled="true" hidden="true">Region</option>
+              <option>All</option>
+              <option>Northeast</option>
+              <option>Midwest</option>
+              <option>Southeast</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <button class="refresh-button slds-button slds-button_brand">Refresh</button>
+
+    </div>
+    
+    <!-- responsive grid -->
+    <div class="card-container slds-grid slds-wrap slds-container_x-large">
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Van Speeding</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">All</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">Michelle Jones</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">6/12/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Van Excessive Idle</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">All</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">Michelle Jones</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">6/12/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Dump Truck Speeding SE</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">Southeast</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">John James</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">2/24/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Dump Truck Quick Acceleration</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">All</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">Roger Martin</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">2/25/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Dump Truck Speeding NE</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">All</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">John James</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">2/24/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Dump Truck Sudden Stop</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">Southeast</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">John James</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">2/24/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Vehicle Leave Southeast</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">Southeast</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">Roger Martin</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">8/17/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Vehicle Leave Northeast</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">Northeast</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">Roger Martin</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">8/17/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Vehicle Leave Midwest</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">Midwest</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">Roger Martin</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">8/17/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+        <article class="slds-card">
+          <div class="slds-card__body slds-card__body_inner">
+            <div class="card-row">
+              <label class="card-label">Status</label>
+              <div class="card-switch slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <input type="checkbox" name="checkbox" aria-describedby="toggle-desc" value="on">
+                  <span id="toggle-desc" class="slds-checkbox_faux_container" aria-live="assertive">
+                    <span class="slds-checkbox_faux"></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Vehicle Rule</label>
+              <span class="card-text">Dump Truck Engine Off</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Region</label>
+              <span class="card-text">All</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created By</label>
+              <span class="card-text">John James</span>
+            </div>
+            <div class="card-row">
+              <label class="card-label">Created Date</label>
+              <span class="card-text">8/12/16</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
 </html>
